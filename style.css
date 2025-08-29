@@ -1,0 +1,158 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+@font-face {
+    font-family: "Technology";
+    src: url("./fonts/Technology.ttf") format("truetype"),
+         url("./fonts/Technology-Bold.ttf") format("truetype"),
+         url("./fonts/Technology-Italic.ttf") format("truetype");
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: space-evenly;
+    background-image: url(https://cdn.wallpapersafari.com/0/57/BEXQ7h.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Technology", sans-serif;
+    font-size: 12px;
+}
+
+#elegirLado{
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color:rgb(194, 182, 19) ;
+}
+
+#botonesEligeLado{
+    display: flex;
+    padding: 10px 0;
+    list-style: none;
+    gap: 40px;
+}
+
+/* Estilo base para todos los botones */
+#botonesEligeLado button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Technology", sans-serif;
+}
+
+/* Lado Luminoso (primer botón) */
+#botonesEligeLado li:nth-child(1) button {
+    border-color: #5EDFFF;
+    color: #5EDFFF;
+}
+
+#botonesEligeLado li:nth-child(1) button:hover {
+    transform: scale(1.2);
+    background-color: rgba(94, 223, 255, 0.9);
+    color: black;
+    box-shadow: 0 0 20px #5EDFFF;
+}
+
+/* Lado Oscuro (segundo botón) */
+#botonesEligeLado li:nth-child(2) button {
+    border-color: #FF4C4C;
+    color: #FF4C4C;
+}
+
+#botonesEligeLado li:nth-child(2) button:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 76, 76, 0.9);
+    color: black;
+    box-shadow: 0 0 20px #FF4C4C;
+}
+
+
+ 
+
+.clock{
+    width: 500px;
+    border: 1px solid gray;
+    color: rgb(194, 182, 19);
+    padding: 40px;
+    background-image: url(https://media.istockphoto.com/id/1732963074/es/foto/cielo-nocturno-estrellado-en-el-espacio.jpg?s=612x612&w=0&k=20&c=e4BowuietzqEMGIAoh23WfXeX49nLg_flLOTr1P7m1E=);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    font-variant-numeric: tabular-nums; 
+}
+
+#date{
+    font-size: 30px;
+}
+
+.clock ul{
+    padding: 15px 30px 0 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 100px;
+    gap: 20px;
+}
+
+.clock ul li {
+    display: inline-block;
+    width: 1ch;       
+    text-align: center;
+}
+
+.clock ul li:nth-child(2),
+.clock ul li:nth-child(4) {
+    width: 1.3ch;
+}
+
+body.luminoso{
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/595/989/desktop-wallpaper-cool-star-wars-light-side-list-light-side-of-the-force.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.luminoso .clock {
+    color: #5EDFFF;
+    position: fixed;   
+    top: 20px;         
+    left: 20px;        
+    width: 400px;
+    padding: 40px;
+    
+}
+
+body.oscuro{
+    background-image: url(https://ja54312.github.io/Bootstrap_Conferencia/assets/images/STARWARS-DIFUSION.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.oscuro .clock {
+    color: #FF4C4C;
+    position: fixed;   
+    top: 20px;         
+    left: 20px;        
+    width: 400px;
+    padding: 40px;
+    
+}
+
