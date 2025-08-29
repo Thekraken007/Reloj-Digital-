@@ -156,3 +156,94 @@ body.oscuro{
     
 }
 
+/* ====== Media Queries Responsivo ====== */
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #elegirLado {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+
+  #botonesEligeLado {
+    gap: 20px;
+  }
+
+  #botonesEligeLado button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .clock {
+    width: 90%;
+    padding: 30px;
+    font-size: 10px;
+  }
+
+  .clock ul {
+    font-size: 70px;
+    gap: 15px;
+  }
+
+  /* Ajuste de posición fija en modo Star Wars */
+  .luminoso .clock,
+  .oscuro .clock {
+    width: 90%;
+    top: 10px;
+    left: 5%;
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  #elegirLado {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+
+  #botonesEligeLado button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .clock {
+    width: 95%;
+    padding: 20px;
+    font-size: 8px;
+  }
+
+  .clock ul {
+    font-size: 50px;
+    gap: 10px;
+  }
+
+  .luminoso .clock,
+  .oscuro .clock {
+    width: 95%;
+    top: 5px;
+    left: 2.5%;
+    padding: 15px;
+    font-size: 10px;
+  }
+}
+
+/* Ajustes para los números del reloj: mantener alineación */
+.clock ul li {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+}
+
+.clock ul li:nth-child(2),
+.clock ul li:nth-child(4) {
+  width: 1.3ch;
+}
